@@ -1,0 +1,28 @@
+﻿@model BookStore.Models.Author
+
+@{
+    ViewData["Title"] = "Details";
+}
+<br/>
+
+<div>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AuthorName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AuthorName)
+        </dd>
+    </dl>
+</div>
+<div>
+    @*@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ @class= "btn btn-outline-info" })*@
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-danger">Edit</a>
+    <a asp-action="Index" class="btn btn-info">Back to List</a>
+</div>
